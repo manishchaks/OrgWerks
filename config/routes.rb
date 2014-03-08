@@ -1,4 +1,6 @@
 OrgWerks::Application.routes.draw do
+  resources :links
+
   resources :messages
 
   resources :pages

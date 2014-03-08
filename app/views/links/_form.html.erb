@@ -1,0 +1,33 @@
+<%= form_for(@link) do |f| %>
+  <% if @link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@link.errors.count, "error") %> prohibited this link from being saved:</h2>
+
+      <ul>
+      <% @link.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :prefix %><br>
+    <%= f.text_field :prefix %>
+  </div>
+  <div class="field">
+    <%= f.label :site_url %><br>
+    <%= f.text_field :site_url %>
+  </div>
+  <div class="field">
+    <%= f.label :tld %><br>
+    <%= f.text_field :tld %>
+  </div>
+  <div class="field">
+    <%= f.label :page_url %><br>
+    <%= f.text_field :page_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Prefix:</strong>
+  <%= @link.prefix %>
+</p>
+
+<p>
+  <strong>Site url:</strong>
+  <%= @link.site_url %>
+</p>
+
+<p>
+  <strong>Tld:</strong>
+  <%= @link.tld %>
+</p>
+
+<p>
+  <strong>Page url:</strong>
+  <%= @link.page_url %>
+</p>
+
+<%= link_to 'Edit', edit_link_path(@link) %> |
+<%= link_to 'Back', links_path %>
